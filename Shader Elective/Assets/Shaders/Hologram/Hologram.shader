@@ -50,6 +50,7 @@ Shader "ElectiveShaders/Hologram"
                 o.normal = v.normal;
 				float4 objectSpacePos = v.vertex;
 				o.worldPos = mul(UNITY_MATRIX_M, objectSpacePos);
+				o.normal = mul(UNITY_MATRIX_M, v.normal);
 				return o;
             }
 
@@ -65,7 +66,7 @@ Shader "ElectiveShaders/Hologram"
 				
 				float3 viewDir = i.worldPos - _WorldSpaceCameraPos;
 				viewDir = normalize(viewDir);
-				
+				i.normal = normalize(i.normal);
 				float angleToCam = dot(i.normal.xyz, viewDir) * -1;
 				
 				float inverseFacing = 1 - angleToCam;

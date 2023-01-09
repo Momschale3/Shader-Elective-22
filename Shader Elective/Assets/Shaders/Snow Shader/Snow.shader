@@ -1,5 +1,6 @@
 Shader "Unlit/Snow"
 {
+	/*
 	Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
@@ -82,7 +83,8 @@ Shader "Unlit/Snow"
 						lightDistance = distance(lightPos,  worldPos);
 					}
 
-					fixed3 incomingLight = _LightColor0 * lightFalloff(lightDistance);
+					
+					fixed3 incomingLight = lightFalloff(lightDistance);
 
 					fixed3 diffuseLight = lambertLighting(lightDirection, normal)           * albedo;
 					fixed3 specularLight = blinnPhong(viewDirection, lightDirection, noisyNormal, roughness) * specularColor;
@@ -91,6 +93,7 @@ Shader "Unlit/Snow"
 
 					lightCol += UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
 
+					
 					return lightCol;
 				}
 
@@ -114,7 +117,7 @@ Shader "Unlit/Snow"
 					UNITY_APPLY_FOG(i.fogCoord, col);
 					return col;
 				}
-
+				*/
 				ENDCG
 			}
 		}
