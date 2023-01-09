@@ -30,5 +30,5 @@ Material:
     m_Colors:
     - _Color: {r: 0.5845793, g: 0, b: 0.6698113, a: 1}
     - _CutoffNormal: {r: 0, g: 1, b: 0, a: 0}
-    - _CutoffPosition: {r: 0, g: 1.112, b: 0, a: 0}
+    - _CutoffPosition: {r: -0.037, g: 1.208, b: -0.008, a: 0}
   m_BuildTextureStacks: []
